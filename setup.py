@@ -13,7 +13,7 @@ with open("src/aws_assume_role/version.py") as fp:
     exec(fp.read(), version)
 
 setup(
-    name='onelogin-aws-assume-role',
+    name='bc-onelogin-aws-assume-role',
     version=version['__version__'],
     description="Assume an AWS Role and get temporary credentials using OneLogin",
     classifiers=[
