@@ -81,6 +81,9 @@ def get_options():
                         default=False,
                         action="store_true",
                         help="Be asked how procced in each iteration?")
+    parser.add_argument("-c", "--config-file",
+                        dest="config_file",
+                        help="Path to config file (onelogin.aws.json)")
     parser.add_argument("--aws-region",
                         dest="aws_region",
                         help="AWS region to use")
@@ -105,7 +108,7 @@ def get_options():
 
     # Read params from file, but only use them
     # if no value provided on command line
-    config = get_config()
+    config = get_config(options.config_file)
     if config is not None:
         if 'app_id' in config.keys() and config['app_id'] and not options.app_id:
             options.app_id = config['app_id']
@@ -148,9 +151,10 @@ def get_options():
     return options
 
 
-def get_config():
-    if os.path.isfile('onelogin.aws.json'):
-        json_data = open('onelogin.aws.json').read()
+def get_config(config_file_path):
+    path_to_config = config_file_path if config_file_path is not None else 'onelogin.aws.json'
+    if os.path.isfile(path_to_config):
+        json_data = open(path_to_config).read()
         return json.loads(json_data)
 
 
