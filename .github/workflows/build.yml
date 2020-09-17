@@ -24,7 +24,6 @@ jobs:
           ## update python version
           file_version="__version__ = '$new_tag'"
           echo -e "#! /usr/bin/env python \n\n $file_version" > 'src/aws_assume_role/version.py'
-          echo -e "#! /usr/bin/env python \n\n $file_version" > 'src/onelogin/aws-assume-role/version.py'
 
           git commit --reuse-message=HEAD@{1} src/onelogin/aws-assume-role/version.py src/onelogin/aws-assume-role/version.py || echo "No changes to commit"
           git push origin
@@ -73,5 +72,5 @@ jobs:
           pipenv run pip install bc-onelogin-aws-assume-role -U
           git pull
           pipenv run poet -f bc-onelogin-aws-assume-role > HomebrewFormula/bc-onelogin-aws-assume-role.rb
-          git commit --reuse-message=HEAD@{1} HomebrewFormula/checkov.rb || echo "No brew changes to commit"
+          git commit --reuse-message=HEAD@{1} HomebrewFormula/bc-onelogin-aws-assume-role.rb || echo "No brew changes to commit"
           git push origin
