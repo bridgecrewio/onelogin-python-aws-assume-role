@@ -786,7 +786,9 @@ def main():
 
             if config_file_writer is None:
                 config_file_writer = ConfigFileWriter()
-
+            [profile, admin] = role_arn.split('-')
+            if admin == 'admin':
+                profile_name = profile
             updated_config = {
                 '__section__': profile_name,
                 'aws_access_key_id': access_key_id,
