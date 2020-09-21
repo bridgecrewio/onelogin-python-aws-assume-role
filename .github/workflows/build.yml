@@ -19,7 +19,7 @@ jobs:
           latest_tag=$(git describe --tags `git rev-list --tags --max-count=1`)
           echo "latest tag: $latest_tag"
           new_tag=$(echo $latest_tag | awk -F. -v a="$1" -v b="$2" -v c="$3" '{printf("%d.%d.%d", $1+a, $2+b , $3+1)}')
-          echo "new tag: $new_tag"
+          echo "new tag: v$new_tag"
 
           ## update python version
           cat << EOF > src/aws_assume_role/version.py
@@ -31,8 +31,8 @@ jobs:
 
           git commit --reuse-message=HEAD@{1} src/aws_assume_role/version.py || echo "No changes to commit"
           git push origin
-          git tag $new_tag
-          git push origin $new_tag
+          git tag v$new_tag
+          git push origin v$new_tag
   publish-package:
     needs: bump-version
     runs-on: ubuntu-latest
