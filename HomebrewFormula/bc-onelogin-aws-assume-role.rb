@@ -9,13 +9,13 @@ class BcOneloginAwsAssumeRole < Formula
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/34/cf/6d11d4ec66f4c290fb58e9ce04441681714c3b8c76a35fe2d97a3ab423d0/boto3-1.14.63.tar.gz"
-    sha256 "25c716b7c01d4664027afc6a6418a06459e311a610c7fd39a030a1ced1b72ce4"
+    url "https://files.pythonhosted.org/packages/50/9e/00286cb4d6ea4971870f180af23fad4ab2824ef1f3777eab1d34d3af1009/boto3-1.15.1.tar.gz"
+    sha256 "44073b1b1823ffc9edcf9027afbca908dad6bd5000f512ca73f929f6a604ae24"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/41/3d/360ccf3612644b661c55fde8959e6a1597ce589d1fad0b62c351d2623a4f/botocore-1.17.63.tar.gz"
-    sha256 "40f13f6c9c29c307a9dc5982739e537ddce55b29787b90c3447b507e3283bcd6"
+    url "https://files.pythonhosted.org/packages/80/30/8b001f472abd5843942027cc919e7a5fa302a72319eb0e7eb540f11192ae/botocore-1.18.1.tar.gz"
+    sha256 "6bdf60281c2e80360fe904851a1a07df3dcfe066fe88dc7fba2b5e626ac05c8c"
   end
 
   resource "certifi" do
@@ -31,11 +31,6 @@ class BcOneloginAwsAssumeRole < Formula
   resource "defusedxml" do
     url "https://files.pythonhosted.org/packages/a4/5f/f8aa58ca0cf01cbcee728abc9d88bfeb74e95e6cb4334cfd5bed5673ea77/defusedxml-0.6.0.tar.gz"
     sha256 "f684034d135af4c6cbb949b8a4d2ed61634515257a67299e5f940fbaa34377f5"
-  end
-
-  resource "docutils" do
-    url "https://files.pythonhosted.org/packages/93/22/953e071b589b0b1fee420ab06a0d15e5aa0c7470eb9966d60393ce58ad61/docutils-0.15.2.tar.gz"
-    sha256 "a2aeea129088da402665e92e0b25b04b073c04b2dce4ab65caaa38b7ce2e1a99"
   end
 
   resource "idna" do
