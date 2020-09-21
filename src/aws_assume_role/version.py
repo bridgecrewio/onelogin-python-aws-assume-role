@@ -1,1 +1,4 @@
-#! /usr/bin/env python \n\n__version__ = '0.8.13'
+#! /usr/bin/env python
+
+__version__ = '0.8.14'
+
