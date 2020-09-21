@@ -3,8 +3,8 @@ class BcOneloginAwsAssumeRole < Formula
 
   desc "Shiny new formula"
   homepage "https://github.com/onelogin/onelogin-python-aws-assume-role"
-  url "https://files.pythonhosted.org/packages/c6/2e/33adcbdc25b556487c645d6bca5a1f37bd76b822fc414b70272f912a474c/bc-onelogin-aws-assume-role-1.8.3.tar.gz"
-  sha256 "06108fb9d773b5721c4a22bd625bf553256025bd37bac3dd6cc8215fa39496de"
+  url "https://files.pythonhosted.org/packages/d5/ac/e35514ce87c9e26196cd7342a40cbb279ef27a6debcba030493400249a20/bc-onelogin-aws-assume-role-1.8.4.tar.gz"
+  sha256 "6f423ebec6f81f7ab6967a1fb801a7fda2e5ba22c9682dbbf4228ae9bc03e18d"
 
   depends_on "python3"
 
