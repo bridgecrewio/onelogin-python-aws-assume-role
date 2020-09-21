@@ -26,7 +26,7 @@ jobs:
           echo -e "#! /usr/bin/env python \n\n$file_version" > 'src/aws_assume_role/version.py'
           cat src/aws_assume_role/version.py
 
-          git commit --reuse-message=HEAD@{1} src/aws-assume-role/version.py || echo "No changes to commit"
+          git commit --reuse-message=HEAD@{1} src/aws-assume-role/version.py
           git push origin
           git tag $new_tag
           git push origin $new_tag
