@@ -25,7 +25,7 @@ jobs:
           file_version="__version__ = '$new_tag'"
           echo "#! /usr/bin/env python \n\n$file_version" > 'src/aws_assume_role/version.py'
 
-          git commit --reuse-message=HEAD@{1} "bumping version" src/aws_assume_role/version.py || echo "No changes to commit"
+          git commit --reuse-message=HEAD@{1} src/aws_assume_role/version.py || echo "No changes to commit"
           git push origin
           git tag $new_tag
           git push origin $new_tag
