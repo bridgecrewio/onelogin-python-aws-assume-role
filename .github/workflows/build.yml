@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-      - name: update docs and bump version
+      - name: bump version
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -23,8 +23,8 @@ jobs:
 
           ## update python version
           file_version="__version__ = '$new_tag'"
-          ls -la
           echo -e "#! /usr/bin/env python \n\n$file_version" > 'src/aws_assume_role/version.py'
+          cat src/aws_assume_role/version.py
 
           git commit --reuse-message=HEAD@{1} src/aws-assume-role/version.py || echo "No changes to commit"
           git push origin
