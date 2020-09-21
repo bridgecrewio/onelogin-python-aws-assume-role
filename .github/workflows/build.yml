@@ -23,11 +23,11 @@ jobs:
 
           ## update python version
           cat << EOF > src/aws_assume_role/version.py
-#! /usr/bin/env python
+          #! /usr/bin/env python
 
-__version__ = '$new_tag'
+          __version__ = '$new_tag'
 
-EOF
+          EOF
 
           git commit --reuse-message=HEAD@{1} src/aws_assume_role/version.py || echo "No changes to commit"
           git push origin
