@@ -2,9 +2,9 @@ class BcOneloginAwsAssumeRole < Formula
   include Language::Python::Virtualenv
 
   desc "Shiny new formula"
-  homepage "https://github.com/onelogin/onelogin-python-aws-assume-role"
-  url "https://files.pythonhosted.org/packages/aa/e8/689af084d2a89296419d7a07c7ecfd98c71894fba0647378cce11f9b1190/bc-onelogin-aws-assume-role-1.8.7.tar.gz"
-  sha256 "5a69259b5b6c42424b78b2242d81c548ff7b64f4aae7e9c807c0da715fa192af"
+  homepage "https://github.com/bridgecrewio/onelogin-python-aws-assume-role"
+  url "https://files.pythonhosted.org/packages/7c/0f/556b169f020b3fa63398b1b0b1bc7dcf44a0ce0847cd6492499e0ab934d3/bc-onelogin-aws-assume-role-1.8.8.tar.gz"
+  sha256 "5a3fb6b880cf8f274bf2b730b7659781c70ab5dfb36d9448b1f78d93bfd019c7"
 
   depends_on "python3"
 
