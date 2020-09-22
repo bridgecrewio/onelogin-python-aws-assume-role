@@ -3,19 +3,19 @@ class BcOneloginAwsAssumeRole < Formula
 
   desc "Shiny new formula"
   homepage "https://github.com/onelogin/onelogin-python-aws-assume-role"
-  url "https://files.pythonhosted.org/packages/6f/7b/2ce3b353f95d5d48e88af1c57dbfa8ca01a215358e5d1871d0419827af51/bc-onelogin-aws-assume-role-1.8.6.tar.gz"
-  sha256 "b3c2a3f645790eafe385456dad8303a7c3d415a3aa2a40ae4ebe053801e319f9"
+  url "https://files.pythonhosted.org/packages/aa/e8/689af084d2a89296419d7a07c7ecfd98c71894fba0647378cce11f9b1190/bc-onelogin-aws-assume-role-1.8.7.tar.gz"
+  sha256 "5a69259b5b6c42424b78b2242d81c548ff7b64f4aae7e9c807c0da715fa192af"
 
   depends_on "python3"
 
   resource "boto3" do
-    url "https://files.pythonhosted.org/packages/50/9e/00286cb4d6ea4971870f180af23fad4ab2824ef1f3777eab1d34d3af1009/boto3-1.15.1.tar.gz"
-    sha256 "44073b1b1823ffc9edcf9027afbca908dad6bd5000f512ca73f929f6a604ae24"
+    url "https://files.pythonhosted.org/packages/80/83/00c4d3f512d63771456dfe8666e9214703235a66fe353f624da6c458c45f/boto3-1.15.2.tar.gz"
+    sha256 "7e22c4e21533d7c532e0136610b9cc45e3f81e57b738ff434a1f3d0a3b16e05e"
   end
 
   resource "botocore" do
-    url "https://files.pythonhosted.org/packages/80/30/8b001f472abd5843942027cc919e7a5fa302a72319eb0e7eb540f11192ae/botocore-1.18.1.tar.gz"
-    sha256 "6bdf60281c2e80360fe904851a1a07df3dcfe066fe88dc7fba2b5e626ac05c8c"
+    url "https://files.pythonhosted.org/packages/a1/92/5336c9b5beac8bded4c3f6ee408e88c193d3545e3a9a901d8918a533688c/botocore-1.18.2.tar.gz"
+    sha256 "7fcfc20921de61bd015d363226476c6f51f38846c2a93f67ee7c70b66f54e223"
   end
 
   resource "certifi" do
