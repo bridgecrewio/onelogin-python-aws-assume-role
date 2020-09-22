@@ -103,6 +103,10 @@ def get_options():
                         default=False,
                         help="By default in order to select Account/Role, the list will be ordered by account ids. Enable this to list by role name instead.",
                         action="store_true")
+    parser.add_argument("--sdk-file",
+                        dest="sdk_file",
+                        default='onelogin.sdk.json',
+                        help="The location of onelogin.sdk.json")
 
     options = parser.parse_args()
 
@@ -167,8 +171,8 @@ def get_client(options):
         client_secret = options.client_secret
         region = options.region
     else:
-        if os.path.isfile('onelogin.sdk.json'):
-            json_data = open('onelogin.sdk.json').read()
+        if os.path.isfile(options.sdk_file):
+            json_data = open(options.sdk_file).read()
             data = json.loads(json_data)
             if 'client_id' in data.keys() and 'client_secret' in data.keys():
                 client_id = data['client_id']
