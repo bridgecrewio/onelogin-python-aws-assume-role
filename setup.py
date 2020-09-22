@@ -27,14 +27,14 @@ setup(
     author='OneLogin',
     author_email='support@onelogin.com',
     license='MIT',
-    url='https://github.com/onelogin/onelogin-python-aws-assume-role',
+    url='https://github.com/bridgecrewio/onelogin-python-aws-assume-role',
     packages=[
         'aws_assume_role'
     ],
     package_dir={
         '': 'src',
     },
-    package_data={'': ['accounts.yaml','onelogin.sdk.json']},
+    package_data={'': ['accounts.yaml', 'onelogin.sdk.json']},
     install_requires=[
         'boto3>=1.14.63',
         'onelogin>=1.9.0',
